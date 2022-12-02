@@ -40,10 +40,10 @@ jobs:
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: Building Docker Image
       run: |
-        docker build . --file Dockerfile --tag vi67159/demo2
+        docker build . --file Dockerfile --tag vi67159/endtoenddemo2
     - name: Pushing docker image
       run: |
-        docker push ${{secrets.DOCKER_USERNAME}}/demo2
+        docker push ${{secrets.DOCKER_USERNAME}}/endtoenddemo2
     # - name: Deploy to Heroku
     #   env:
     #     HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
@@ -52,4 +52,4 @@ jobs:
     #   run: |
     #     git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
     #     git push heroku HEAD:main -f
-    # Vaish
+    # Vaishu
